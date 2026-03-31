@@ -125,6 +125,11 @@ nav{
     padding-inline: 15px;
     margin-inline: 20px;
 }
+.nav-button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .nav-menu-btn{
     display: none;
 }
@@ -858,11 +863,11 @@ footer{
     }
 }
 
-/* ----- NAV BUTTON GROUP ----- */
-.nav-button{
+/* ----- NAV RIGHT GROUP ----- */
+.nav-right{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 /* ----- THEME TOGGLE BUTTON ----- */
