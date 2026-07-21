@@ -12,6 +12,10 @@ function myButtonHireFunction() {
   document.getElementById("contact").scrollIntoView({ behavior: 'smooth' });
 }
 
+function myScrollToWork() {
+  document.getElementById("projects").scrollIntoView({ behavior: 'smooth' });
+}
+
 function myDownloadCv() {
   const link = document.createElement('a');
   link.href = 'assets/cv/Enrico Mabuka Jr.pdf';
@@ -52,43 +56,50 @@ function sendMessage() {
     message: message,
   }).then(function () {
     localStorage.setItem('msg_sent', '1');
-    status.style.color = '#27ae60';
+    status.style.color = '#10b981';
     status.textContent = 'Message sent! I\'ll get back to you soon.';
     document.getElementById('contact-name').value    = '';
     document.getElementById('contact-email').value   = '';
     document.getElementById('contact-message').value = '';
     btn.disabled = true;
-    btn.innerHTML = 'Message Sent <i class="uil uil-check"></i>';
+    btn.innerHTML = 'Message sent <i class="uil uil-check"></i>';
   }, function () {
     status.style.color = '#e74c3c';
     status.textContent = 'Something went wrong. Please try again.';
     btn.disabled = false;
-    btn.innerHTML = 'Send Message <i class="uil uil-message"></i>';
+    btn.innerHTML = 'Send message <i class="uil uil-message"></i>';
   });
 }
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
-  strings: ["Software Developer", "App Developer", "DevOps Engineer"],
+  strings: [
+    "automates your operations.",
+    "saves your team hours.",
+    "turns manual work into systems.",
+    "grows with your business.",
+  ],
   loop: true,
-  typeSpeed: 100,
-  backSpeed: 80,
-  backDelay: 2000
+  typeSpeed: 70,
+  backSpeed: 45,
+  backDelay: 1800
 })
 
 /* ----- SCROLL REVEAL ANIMATION ----- */
-const sr = ScrollReveal({ distance: '80px', duration: 2000, reset: true })
+const sr = ScrollReveal({ distance: '60px', duration: 1400, reset: false })
 
 sr.reveal('.featured-text-card', { origin: 'top' })
 sr.reveal('.featured-name',      { origin: 'top', delay: 100 })
 sr.reveal('.featured-text-info', { origin: 'top', delay: 200 })
-sr.reveal('.featured-text-btn',  { origin: 'top', delay: 200 })
-sr.reveal('.social_icons',       { origin: 'top', delay: 200 })
-sr.reveal('.featured-image',     { origin: 'top', delay: 300 })
+sr.reveal('.featured-text-btn',  { origin: 'top', delay: 300 })
+sr.reveal('.social_icons',       { origin: 'top', delay: 400 })
+sr.reveal('.featured-image',     { origin: 'right', delay: 200 })
 sr.reveal('.top-header',         { origin: 'top' })
-sr.reveal('.about-info',         { origin: 'left', delay: 100 })
+sr.reveal('.about-intro',        { origin: 'bottom', delay: 100 })
+sr.reveal('.service-card',       { origin: 'bottom', interval: 100 })
+sr.reveal('.tools-strip',        { origin: 'bottom', delay: 100 })
+sr.reveal('.project-card',       { origin: 'bottom', interval: 80 })
 sr.reveal('.contact-info',       { origin: 'left', delay: 100 })
-sr.reveal('.skills-box',         { origin: 'right', delay: 100 })
 sr.reveal('.form-control',       { origin: 'right', delay: 100 })
 
 /* ----- SCROLL HANDLERS ----- */
@@ -108,33 +119,18 @@ let sectionCache = [];
 function cacheSectionDimensions() {
   sectionCache = Array.from(sections).map(s => ({
     id:     s.getAttribute('id'),
-    top:    s.offsetTop - 50,
+    top:    s.offsetTop - 90,
     height: s.offsetHeight,
   }));
 }
 cacheSectionDimensions();
 window.addEventListener('resize', cacheSectionDimensions);
 
-// Guard to avoid redundant DOM writes in the header shadow logic
-let headerScrolled = false;
-
 function onScroll() {
   const scrollY = window.scrollY;
 
-  // Header shadow — only write when state changes
-  const shouldScroll = scrollY > 50;
-  if (shouldScroll !== headerScrolled) {
-    headerScrolled = shouldScroll;
-    if (shouldScroll) {
-      navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-      navHeader.style.height = "70px";
-      navHeader.style.lineHeight = "70px";
-    } else {
-      navHeader.style.boxShadow = "none";
-      navHeader.style.height = "90px";
-      navHeader.style.lineHeight = "90px";
-    }
-  }
+  // Header shrink/shadow — class toggle is idempotent
+  navHeader.classList.toggle('scrolled', scrollY > 40);
 
   // Active nav link — uses cached dimensions
   sectionCache.forEach(({ id, top, height }) => {
@@ -152,6 +148,44 @@ function onScroll() {
 }
 
 window.addEventListener('scroll', onScroll);
+
+/* ----- CURSOR GLOW FOLLOWER ----- */
+(function () {
+  const glow = document.querySelector('.cursor-glow');
+  if (!glow) return;
+
+  const finePointer  = window.matchMedia('(pointer: fine)').matches;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!finePointer || reduceMotion) return;
+
+  let targetX = window.innerWidth / 2, targetY = window.innerHeight / 2;
+  let curX = targetX, curY = targetY;
+  let visible = false;
+
+  window.addEventListener('mousemove', (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+    if (!visible) { visible = true; glow.style.opacity = '1'; }
+  });
+  document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; visible = false; });
+
+  // Gently grow the glow over interactive elements
+  const interactive = 'a, button, .icon, .service-card, .project-card, input, textarea';
+  document.addEventListener('mouseover', (e) => {
+    if (e.target.closest && e.target.closest(interactive)) glow.classList.add('is-hover');
+  });
+  document.addEventListener('mouseout', (e) => {
+    if (e.target.closest && e.target.closest(interactive)) glow.classList.remove('is-hover');
+  });
+
+  function render() {
+    curX += (targetX - curX) * 0.15;
+    curY += (targetY - curY) * 0.15;
+    glow.style.transform = 'translate(' + curX + 'px, ' + curY + 'px) translate(-50%, -50%)';
+    requestAnimationFrame(render);
+  }
+  render();
+})();
 
 /* ----- DARK MODE TOGGLE ----- */
 function myThemeFunction() {
@@ -175,7 +209,7 @@ document.getElementById('copyright-year').textContent = new Date().getFullYear()
     const btn = document.getElementById('send-btn');
     if (btn) {
       btn.disabled = true;
-      btn.innerHTML = 'Message Sent <i class="uil uil-check"></i>';
+      btn.innerHTML = 'Message sent <i class="uil uil-check"></i>';
     }
   }
 })();

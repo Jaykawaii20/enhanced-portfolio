@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enrico Mabuka Jr — freelance software developer helping businesses digitize, automate, and scale with clean, reliable software.">
 
     <!-- --------- UNICONS ---------- -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
@@ -14,37 +15,39 @@
     <!-- --------- FAVICON ---------- -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
-    <title>Enrico | Software Developer</title>
+    <title>Enrico | Software for Growing Businesses</title>
     <!-- --------- EMAILJS ---------- -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>emailjs.init('B0SSu0Qy_z_pNln0Z');</script>
 </head>
 
 <body>
+    <!-- --------------- CURSOR GLOW --------------- -->
+    <div class="cursor-glow" aria-hidden="true"></div>
+
     <div class="container">
         <!-- --------------- HEADER --------------- -->
         <nav id="header">
             <div class="nav-logo">
                 <p class="nav-name">Enrico</p>
-                <span class="">.</span>
+                <span>.</span>
             </div>
             <div class="nav-menu" id="myNavMenu">
                 <ul class="nav_menu_list">
                     <li class="nav_list">
                         <a href="#home" class="nav-link active-link">Home</a>
-                        <div class="circle"></div>
                     </li>
                     <li class="nav_list">
                         <a href="#about" class="nav-link">About</a>
-                        <div class="circle"></div>
                     </li>
                     <li class="nav_list">
-                        <a href="#projects" class="nav-link">Projects</a>
-                        <div class="circle"></div>
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#projects" class="nav-link">Work</a>
                     </li>
                     <li class="nav_list">
                         <a href="#contact" class="nav-link">Contact</a>
-                        <div class="circle"></div>
                     </li>
                 </ul>
             </div>
@@ -62,8 +65,11 @@
 
         <!-- -------------- MAIN ---------------- -->
         <main class="wrapper">
-            <!-- -------------- FEATURED BOX ---------------- -->
+            <!-- -------------- HERO ---------------- -->
             <section class="featured-box" id="home">
+                <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+                <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
                 <div class="featured-text">
                     <div class="hero-available">
                         <span class="hero-dot"></span> Available for work
@@ -71,31 +77,32 @@
                     <div class="featured-text-card">
                         <span>Enrico Mabuka Jr</span>
                     </div>
-                    <div class="featured-name">
-                        <p>I'm <span class="typedText"></span></p>
-                    </div>
+                    <h1 class="featured-name">
+                        I build software that <span class="typedText"></span>
+                    </h1>
                     <div class="featured-text-info">
-                        <p>Passionate software developer who loves building clean, user-friendly applications — from mobile apps to web platforms and cloud-ready systems.</p>
+                        <p>I'm a freelance software developer helping businesses digitize, automate, and scale. From booking systems to full ERP platforms, I turn everyday operational headaches into clean, reliable software.</p>
                     </div>
                     <div class="featured-text-btn">
-                        <button class="btn blue-btn" onclick="myButtonHireFunction()">Hire Me <i class="uil uil-arrow-right"></i></button>
-                        <button class="btn" onclick="myDownloadCv()">Download CV <i class="uil uil-file-alt"></i></button>
+                        <button class="btn btn-primary" onclick="myButtonHireFunction()">Start a project <i class="uil uil-arrow-right"></i></button>
+                        <button class="btn btn-ghost" onclick="myScrollToWork()">See my work</button>
                     </div>
                     <div class="social_icons">
-                        <div class="icon instagram-icon"><a class="uil uil-instagram" href="https://www.instagram.com/jaykatagaki/" target="_blank" rel="noopener noreferrer"></a></div>
-                        <div class="icon linkedin-icon"><a class="uil uil-linkedin-alt" href="https://www.linkedin.com/in/enrico-mabuka-jr-b11969255" target="_blank" rel="noopener noreferrer"></a></div>
-                        <div class="icon github-icon"><a class="uil uil-github-alt" href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"></a></div>
+                        <div class="icon instagram-icon"><a class="uil uil-instagram" href="https://www.instagram.com/jaykatagaki/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"></a></div>
+                        <div class="icon linkedin-icon"><a class="uil uil-linkedin-alt" href="https://www.linkedin.com/in/enrico-mabuka-jr-b11969255" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a></div>
+                        <div class="icon github-icon"><a class="uil uil-github-alt" href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer" aria-label="GitHub"></a></div>
                     </div>
                 </div>
                 <div class="featured-image">
                     <div class="image-wrapper">
+                        <div class="image-glow" aria-hidden="true"></div>
                         <div class="image">
-                            <img src="assets/images/avatar.jfif" alt="avatar">
+                            <img src="assets/images/avatar.jfif" alt="Portrait of Enrico Mabuka Jr">
                         </div>
                     </div>
                 </div>
                 <div class="scroll-icon-box">
-                    <a href="#about" class="scroll-btn">
+                    <a href="#about" class="scroll-btn" aria-label="Scroll to about section">
                         <div class="scroll-mouse">
                             <div class="scroll-wheel"></div>
                         </div>
@@ -103,95 +110,93 @@
                     </a>
                 </div>
             </section>
-            <!-- -------------- ABOUT BOX ---------------- -->
+
+            <!-- -------------- ABOUT ---------------- -->
             <section class="section" id="about">
                 <div class="top-header">
                     <h1>About Me</h1>
+                    <span>A partner who thinks about your business, not just the code</span>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="about-info">
-                            <div class="about-info-tag">
-                                <i class="uil uil-user-circle"></i> Who I Am
-                            </div>
-                            <h3>My Introduction</h3>
-                            <p>I enjoy turning ideas into real, working products. Whether it's a mobile app, a web system, or a backend service — I focus on writing clean code and delivering things that actually work well for the people using them.</p>
-                            <div class="about-mini-stats">
-                                <div class="about-mini-stat">
-                                    <span class="mini-stat-num">5+</span>
-                                    <span class="mini-stat-label">Years Exp.</span>
-                                </div>
-                                <div class="about-mini-stat">
-                                    <span class="mini-stat-num">15+</span>
-                                    <span class="mini-stat-label">Projects</span>
-                                </div>
-                                <div class="about-mini-stat">
-                                    <span class="mini-stat-num">25+</span>
-                                    <span class="mini-stat-label">Clients</span>
-                                </div>
-                            </div>
-                            <div class="about-btn">
-                                <button class="btn" onclick="myDownloadCv()">Download CV <i class="uil uil-import"></i></button>
-                            </div>
+                <div class="about-intro">
+                    <div class="about-info-tag">
+                        <i class="uil uil-user-circle"></i> Who I am
+                    </div>
+                    <p class="about-lead">I help businesses turn ideas and daily operational headaches into working software. Buzzwords don't ship results — reliable, well-built tools do. Everything I make is meant to hold up in real, everyday use, for the people who depend on it.</p>
+                    <div class="about-mini-stats">
+                        <div class="about-mini-stat">
+                            <span class="mini-stat-num">5+</span>
+                            <span class="mini-stat-label">Years experience</span>
+                        </div>
+                        <div class="about-mini-stat">
+                            <span class="mini-stat-num">20+</span>
+                            <span class="mini-stat-label">Projects delivered</span>
+                        </div>
+                        <div class="about-mini-stat">
+                            <span class="mini-stat-num">10+</span>
+                            <span class="mini-stat-label">Happy clients</span>
                         </div>
                     </div>
-                    <div class="col skills-col">
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <i class="uil uil-brackets-curly skills-icon frontend-icon"></i>
-                                <h3>Frontend</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>Bootstrap</span>
-                                <span>Tailwind</span>
-                                <span>JavaScript</span>
-                                <span>TypeScript</span>
-                                <span>Laravel</span>
-                                <span>React</span>
-                                <span>Angular</span>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <i class="uil uil-server skills-icon backend-icon"></i>
-                                <h3>Backend</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>PHP</span>
-                                <span>C#</span>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <i class="uil uil-database skills-icon database-icon"></i>
-                                <h3>Database</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>MySQL</span>
-                                <span>SQL</span>
-                                <span>PostgreSQL</span>
-                                <span>Supabase</span>
-                            </div>
-                        </div>
+                    <div class="about-btn">
+                        <button class="btn btn-primary" onclick="myDownloadCv()">Download CV <i class="uil uil-import"></i></button>
                     </div>
                 </div>
             </section>
 
-            <!-- -------------- PROJECT BOX ---------------- -->
+            <!-- -------------- SERVICES ---------------- -->
+            <section class="section" id="services">
+                <div class="top-header">
+                    <h1>How I Can Help</h1>
+                    <span>Practical software for real business needs</span>
+                </div>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="uil uil-desktop"></i></div>
+                        <h3>Web Applications</h3>
+                        <p>Fast, modern websites and web platforms that look right and work smoothly on every device.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="uil uil-layer-group"></i></div>
+                        <h3>Business Systems</h3>
+                        <p>ERP, CRM, and internal tools that bring your operations, data, and teams into one place.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="uil uil-bolt-alt"></i></div>
+                        <h3>Automation &amp; Workflows</h3>
+                        <p>Replace slow, repetitive manual work with systems that run themselves — accurately, every time.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="uil uil-mobile-android"></i></div>
+                        <h3>Mobile Apps</h3>
+                        <p>Cross-platform apps that put your service directly in your customers' hands.</p>
+                    </div>
+                </div>
+                <div class="tools-strip">
+                    <span class="tools-label">Tools I work with</span>
+                    <div class="tools-list">
+                        <span>React</span>
+                        <span>Laravel</span>
+                        <span>.NET / C#</span>
+                        <span>TypeScript</span>
+                        <span>PostgreSQL</span>
+                        <span>Supabase</span>
+                        <span>Docker</span>
+                        <span>AWS</span>
+                    </div>
+                </div>
+            </section>
 
+            <!-- -------------- WORK ---------------- -->
             <section class="section" id="projects">
                 <div class="top-header">
-                    <h1>Projects</h1>
-                    <span>A selection of things I've built</span>
+                    <h1>Selected Work</h1>
+                    <span>Real problems, solved with software</span>
                 </div>
                 <div class="project-cards">
                     <div class="project-card">
                         <i class="uil uil-calendar-alt project-card-icon"></i>
                         <div>
-                            <h3>Booking System with Automation</h3>
-                            <p>Automated queue timer system for Brigada Golf Range with area selection, time management, status updates, and notifications — eliminating manual execution.</p>
+                            <h3>Booking &amp; Queue Automation</h3>
+                            <p>Replaced hand-run queue management at Brigada Golf Range with an automated booking and timer system — area selection, live status, and notifications, with no staff babysitting it.</p>
                         </div>
                         <div class="project-card-tech">
                             <span>ASP.NET</span>
@@ -199,14 +204,14 @@
                             <span>SQL</span>
                         </div>
                         <div class="project-card-links">
-                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> Code</a>
+                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> View code</a>
                         </div>
                     </div>
                     <div class="project-card">
                         <i class="uil uil-building project-card-icon"></i>
                         <div>
                             <h3>Enterprise Resource Planning</h3>
-                            <p>Contributed to an ERP system for Brigada Distribution Inc. covering supply chain management, logistics, sales, inventory, and related business processes.</p>
+                            <p>Helped build the ERP that runs Brigada Distribution Inc. — supply chain, logistics, sales, and inventory, all connected in one system instead of scattered across spreadsheets.</p>
                         </div>
                         <div class="project-card-tech">
                             <span>ASP.NET</span>
@@ -214,14 +219,14 @@
                             <span>SQL</span>
                         </div>
                         <div class="project-card-links">
-                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> Code</a>
+                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> View code</a>
                         </div>
                     </div>
                     <div class="project-card">
                         <i class="uil uil-shield-check project-card-icon"></i>
                         <div>
                             <h3>Enterprise Risk Management</h3>
-                            <p>Led ERM initiatives for Brigada Group of Companies by analyzing operational, financial, and strategic risks to reduce losses and strengthen internal controls.</p>
+                            <p>Built the tooling behind risk management for the Brigada Group — surfacing operational, financial, and strategic risks early so they get handled before they become costly.</p>
                         </div>
                         <div class="project-card-tech">
                             <span>ASP.NET</span>
@@ -229,31 +234,30 @@
                             <span>SQL</span>
                         </div>
                         <div class="project-card-links">
-                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> Code</a>
+                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> View code</a>
                         </div>
                     </div>
                     <div class="project-card">
                         <i class="uil uil-map-marker project-card-icon"></i>
                         <div>
-                            <h3>Tour Guide Scheduler App</h3>
-                            <p>Developed and maintained a tour guide scheduling application for Delightful Philippines that streamlined bookings, optimized scheduling, and improved coordination.</p>
+                            <h3>Tour Guide Scheduler</h3>
+                            <p>A scheduling app for Delightful Philippines that turned messy manual bookings into smooth, coordinated tour planning — fewer clashes, less back-and-forth.</p>
                         </div>
                         <div class="project-card-tech">
                             <span>Expo</span>
                             <span>React</span>
-                            <span>JavaScript</span>
                             <span>PostgreSQL</span>
                             <span>Supabase</span>
                         </div>
                         <div class="project-card-links">
-                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> Code</a>
+                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> View code</a>
                         </div>
                     </div>
                     <div class="project-card">
                         <i class="uil uil-file-check-alt project-card-icon"></i>
                         <div>
-                            <h3>Service Commitment Agreement System</h3>
-                            <p>Structured framework for Brigada Group defining service provider obligations and client commitments — improving compliance and agreement tracking workflows.</p>
+                            <h3>Service Agreement System</h3>
+                            <p>A system for the Brigada Group that keeps service agreements, obligations, and commitments tracked and easy to honor — so nothing falls through the cracks.</p>
                         </div>
                         <div class="project-card-tech">
                             <span>ASP.NET</span>
@@ -261,14 +265,14 @@
                             <span>SQL</span>
                         </div>
                         <div class="project-card-links">
-                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> Code</a>
+                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> View code</a>
                         </div>
                     </div>
                     <div class="project-card">
                         <i class="uil uil-trees project-card-icon"></i>
                         <div>
-                            <h3>Sarangani Bay Biological System</h3>
-                            <p>Participated in a DENR project aimed at conserving biological and marine ecosystems along Sarangani Bay's protected seaside areas.</p>
+                            <h3>Sarangani Bay Conservation</h3>
+                            <p>Software for a DENR initiative to monitor and protect the marine ecosystems along Sarangani Bay's protected coastline.</p>
                         </div>
                         <div class="project-card-tech">
                             <span>ASP.NET</span>
@@ -276,14 +280,14 @@
                             <span>SQL</span>
                         </div>
                         <div class="project-card-links">
-                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> Code</a>
+                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> View code</a>
                         </div>
                     </div>
                     <div class="project-card">
                         <i class="uil uil-users-alt project-card-icon"></i>
                         <div>
                             <h3>Customer Relationship Management</h3>
-                            <p>Developed a Customer Relationship Management (CRM) system to manage customer data, track interactions, and improve client engagement and retention.</p>
+                            <p>A CRM that keeps customer data, conversations, and follow-ups in one place — so relationships don't slip through the cracks and clients keep coming back.</p>
                         </div>
                         <div class="project-card-tech">
                             <span>Laravel</span>
@@ -291,14 +295,14 @@
                             <span>MySQL</span>
                         </div>
                         <div class="project-card-links">
-                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> Code</a>
+                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> View code</a>
                         </div>
                     </div>
                     <div class="project-card">
                         <i class="uil uil-cloud-upload project-card-icon"></i>
                         <div>
-                            <h3>Automation Deployment Workflow</h3>
-                            <p>Automated application deployment pipeline for clients using Docker, AWS EC2, and Cloudflare — improving scalability, uptime, and deployment efficiency.</p>
+                            <h3>Deployment Automation</h3>
+                            <p>An automated deployment pipeline using Docker, AWS, and Cloudflare that keeps client apps online, fast, and painless to ship updates to.</p>
                         </div>
                         <div class="project-card-tech">
                             <span>Docker</span>
@@ -307,18 +311,17 @@
                             <span>Linux</span>
                         </div>
                         <div class="project-card-links">
-                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> Code</a>
+                            <a href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i> View code</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- -------------- CONTACT BOX ---------------- -->
-
+            <!-- -------------- CONTACT ---------------- -->
             <section class="section" id="contact">
                 <div class="top-header">
-                    <h1>Get in touch</h1>
-                    <span>Do you have a project in your mind? Contact me here</span>
+                    <h1>Let's Build Something</h1>
+                    <span>Have a project or a problem to solve? Tell me about it.</span>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -326,11 +329,11 @@
                             <div class="contact-info-deco contact-deco-1"></div>
                             <div class="contact-info-deco contact-deco-2"></div>
                             <div class="contact-info-inner">
-                                <h2>Let's Work Together</h2>
-                                <p class="contact-tagline">Open for freelance projects &amp; collaborations</p>
+                                <h2>Start a project</h2>
+                                <p class="contact-tagline">Open for freelance work and collaborations</p>
                                 <div class="contact-details">
                                     <a href="mailto:enricomabukajr@gmail.com"><i class="uil uil-envelope"></i> enricomabukajr@gmail.com</a>
-                                    <a href="tel:+639063095360"><i class="uil uil-phone"></i> +639063095360</a>
+                                    <a href="tel:+639063095360"><i class="uil uil-phone"></i> +63 906 309 5360</a>
                                     <span><i class="uil uil-map-marker"></i> Philippines</span>
                                 </div>
                                 <div class="contact-social-links">
@@ -344,16 +347,16 @@
                     <div class="col">
                         <div class="form-control">
                             <div class="form-inputs">
-                                <input type="text" id="contact-name" class="input-field" placeholder="Your Name" required>
-                                <input type="email" id="contact-email" class="input-field" placeholder="Your Email" required>
+                                <input type="text" id="contact-name" class="input-field" placeholder="Your name" required>
+                                <input type="email" id="contact-email" class="input-field" placeholder="Your email" required>
                             </div>
                             <div class="text-area">
-                                <textarea id="contact-message" placeholder="Tell me about your project..." required></textarea>
+                                <textarea id="contact-message" placeholder="Tell me what you're trying to build or fix…" required></textarea>
                             </div>
                             <div class="form-button">
-                                <button id="send-btn" class="btn send-btn" onclick="sendMessage()">Send Message <i class="uil uil-message"></i></button>
+                                <button id="send-btn" class="btn send-btn" onclick="sendMessage()">Send message <i class="uil uil-message"></i></button>
                             </div>
-                            <p id="form-status" style="margin-top:12px;font-size:0.9rem;text-align:center;min-height:1.2em;"></p>
+                            <p id="form-status" role="status" aria-live="polite" style="margin-top:12px;font-size:0.9rem;text-align:center;min-height:1.2em;"></p>
                         </div>
                     </div>
                 </div>
@@ -367,20 +370,21 @@
             <div class="footer-gradient-bar"></div>
             <div class="top-footer">
                 <p class="footer-name">Enrico<span>.</span></p>
-                <p class="footer-tagline">Building digital experiences that matter.</p>
+                <p class="footer-tagline">Building software that solves real problems.</p>
             </div>
             <div class="middle-footer">
                 <ul class="footer-menu">
                     <li class="footer_menu_list"><a href="#home">Home</a></li>
                     <li class="footer_menu_list"><a href="#about">About</a></li>
-                    <li class="footer_menu_list"><a href="#projects">Projects</a></li>
+                    <li class="footer_menu_list"><a href="#services">Services</a></li>
+                    <li class="footer_menu_list"><a href="#projects">Work</a></li>
                     <li class="footer_menu_list"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-social-icons">
-                <div class="icon"><a class="uil uil-instagram" href="https://www.instagram.com/jaykatagaki/" target="_blank" rel="noopener noreferrer"></a></div>
-                <div class="icon"><a class="uil uil-linkedin-alt" href="https://www.linkedin.com/in/enrico-mabuka-jr-b11969255" target="_blank" rel="noopener noreferrer"></a></div>
-                <div class="icon"><a class="uil uil-github-alt" href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer"></a></div>
+                <div class="icon"><a class="uil uil-instagram" href="https://www.instagram.com/jaykatagaki/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"></a></div>
+                <div class="icon"><a class="uil uil-linkedin-alt" href="https://www.linkedin.com/in/enrico-mabuka-jr-b11969255" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a></div>
+                <div class="icon"><a class="uil uil-github-alt" href="https://github.com/Jaykawaii20" target="_blank" rel="noopener noreferrer" aria-label="GitHub"></a></div>
             </div>
             <div class="bottom-footer">
                 <p>Copyright &copy; <span id="copyright-year"></span> <a href="#home" class="footer-copyright-link">Enrico Mabuka Jr</a> — All rights reserved</p>
@@ -390,7 +394,7 @@
     </div>
 
     <!-- ----- BACK TO TOP ----- -->
-    <a href="#home" class="back-to-top" id="backToTop">
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="uil uil-angle-up"></i>
     </a>
 
