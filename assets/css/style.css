@@ -201,19 +201,19 @@ nav.scrolled{
 .hero-glow{
     position: absolute;
     border-radius: 50%;
-    filter: blur(90px);
+    filter: blur(100px);
     z-index: 0;
     pointer-events: none;
 }
 .hero-glow-1{
-    width: 460px; height: 460px;
-    top: 50px; right: -40px;
-    background: radial-gradient(circle, rgba(16,185,129,0.30), transparent 70%);
+    width: 500px; height: 500px;
+    top: 40px; right: -30px;
+    background: radial-gradient(circle, rgba(16,185,129,0.26), transparent 70%);
 }
 .hero-glow-2{
-    width: 380px; height: 380px;
-    bottom: 40px; left: -40px;
-    background: radial-gradient(circle, rgba(45,212,191,0.22), transparent 70%);
+    width: 420px; height: 420px;
+    bottom: 30px; left: -40px;
+    background: radial-gradient(circle, rgba(45,212,191,0.18), transparent 70%);
 }
 .featured-text{
     position: relative;
@@ -322,11 +322,11 @@ nav.scrolled{
 }
 .image-glow{
     position: absolute;
-    inset: -12%;
+    inset: -16%;
     background: radial-gradient(circle, rgba(13,148,136,0.55) 0%, rgba(16,185,129,0.38) 45%, rgba(16,185,129,0) 72%);
     border-radius: 50%;
-    filter: blur(46px);
-    opacity: 0.55;
+    filter: blur(52px);
+    opacity: 0.62;
     z-index: 0;
     animation: imgFloat 7s ease-in-out infinite;
 }
